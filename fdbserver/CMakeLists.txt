@@ -296,7 +296,7 @@ add_library(fdb_sqlite STATIC
 if (WITH_ROCKSDB_EXPERIMENTAL)
   add_definitions(-DSSD_ROCKSDB_EXPERIMENTAL)
   # Set this to 0 if you want to compile RocksDB with `-march=native`.
-  set(PORTABLE_ROCKSDB 1)
+  set(PORTABLE_ROCKSDB 0)
 
   include(CompileRocksDB)
   # CompileRocksDB sets `lz4_LIBRARIES` to be the shared lib, we want to link
