@@ -22,7 +22,7 @@ if (RocksDB_FOUND)
                -DWITH_SNAPPY=OFF
                -DWITH_ZLIB=OFF
                -DWITH_ZSTD=OFF
-               -DWITH_LIBURING=ON
+               -DWITH_LIBURING=${WITH_LIBURING}
                -DWITH_TSAN=${USE_TSAN}
                -DWITH_ASAN=${USE_ASAN}
                -DWITH_UBSAN=${USE_UBSAN}
@@ -53,7 +53,7 @@ else()
                -DWITH_SNAPPY=OFF
                -DWITH_ZLIB=OFF
                -DWITH_ZSTD=OFF
-               -DWITH_LIBURING=ON
+               -DWITH_LIBURING=${WITH_LIBURING}
                -DWITH_TSAN=${USE_TSAN}
                -DWITH_ASAN=${USE_ASAN}
                -DWITH_UBSAN=${USE_UBSAN}

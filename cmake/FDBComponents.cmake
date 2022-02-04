@@ -162,6 +162,8 @@ endif()
 ################################################################################
 
 set(SSD_ROCKSDB_EXPERIMENTAL ON CACHE BOOL "Build with experimental RocksDB support")
+set(PORTABLE_ROCKSDB ON CACHE BOOL "Build RocksDB with `-march=native`") # Set this to OFF if you want to compile RocksDB with
+set(WITH_LIBURING OFF CACHE BOOL "Build with liburing enabled") # Set this to ON if you want to include liburing
 # RocksDB is currently enabled by default for GCC but does not build with the latest
 # Clang.
 if (SSD_ROCKSDB_EXPERIMENTAL AND GCC)
